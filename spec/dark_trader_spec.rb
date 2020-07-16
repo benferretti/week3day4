@@ -8,9 +8,7 @@ end
 
 describe "The fetch and stock data method" do
   it "should identify 3 crypto in the hash" do
-    expect(fetch_and_stock_data.key?("Grin")).to eq(true)
-    expect(fetch_and_stock_data.key?("Bitcoin")).to eq(true)
-    expect(fetch_and_stock_data.key?("Polymath")).to eq(true) 
+    expect(fetch_and_stock_data.key?("BTC")).to eq(true)
   end
 end
 

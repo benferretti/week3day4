@@ -15,7 +15,7 @@ def fetch_and_stock_data
 	crypto_name_array = Array.new
 	crypto_value_array = Array.new
 	list = Hash.new
-	all_cryptos_name = page.xpath('//*[@id="__next"]/div[1]/div[2]/div[1]/div[2]/div/div[2]/div[3]/div/table/tbody/tr/td/div/a')
+	all_cryptos_name = page.xpath('//*[@id="__next"]/div[1]/div[2]/div[1]/div[2]/div/div[2]/div[3]/div/table/tbody/tr/td[3]/div')
 	all_cryptos_values = page.xpath('//*[@id="__next"]/div[1]/div[2]/div[1]/div[2]/div/div[2]/div[3]/div/table/tbody/tr/td[5]/a')
 	all_cryptos_name.map { |crypto_name| crypto_name_array << (crypto_name.text) }
 	all_cryptos_values.map { |crypto_value| crypto_value_array << (crypto_value.text[1..-1].to_f ) }
